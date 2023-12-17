@@ -2,10 +2,17 @@
   "name": "babel-tooling",
   "version": "1.0.0",
   "main": "parser.js",
-  "type": "module",
   "license": "MIT",
   "dependencies": {
     "@babel/parser": "^7.23.6",
     "@babel/traverse": "^7.23.6"
+  },
+  "devDependencies": {
+    "@types/babel__traverse": "^7.20.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "parse": "ts-node parser.ts"
   }
 }

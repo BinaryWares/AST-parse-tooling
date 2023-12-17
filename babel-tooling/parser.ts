@@ -1,13 +1,11 @@
 import { parse } from "@babel/parser";
-import _traverse from "@babel/traverse";
-
-const traverse = _traverse.default;
+import traverse from "@babel/traverse";
 
 let code = `const result = (10 + 2) * 80;`;
 
 let ast = parse(code);
 
-let numericValues = [];
+let numericValues: number[] = [];
 
 traverse(ast, {
   enter(path) {
